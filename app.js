@@ -26,6 +26,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+/*
+ * Local variables
+ */
+app.use(function(req, res, next){
+  app.locals.session = req.session;
+  app.locals.routemap = app.get('routemap');
+  req.routemap = app.locals.routemap;
+  next();
+});
+
+app.set('routemap', require('express-route-mapper'));
+app.get('routemap').map('config', app);
+
+
+console.log(app.get('routemap').get('list_photos'));
+console.log(app.get('routemap').get('new_photos'));
+console.log(app.get('routemap').get('show_photos', 101));
+
+
 
 app.get('/', routes.index);
 app.get('/users', user.list);
