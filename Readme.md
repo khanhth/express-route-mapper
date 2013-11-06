@@ -16,7 +16,7 @@ You can clone the example app in github repository
 *Include module and register all routes in app.js*
 
 ``` javascript
-  app.set('routemap', require('express-route_mapper'));
+  app.set('routemap', require('express-route-mapper'));
   app.get('routemap').map('config', app);
 ```
 
@@ -107,6 +107,8 @@ callback: function(req, res, next) {
 #License
 
 (The MIT License)
+
+Copyright (c) 2013 Tran Khanh &lt;trankhanhsvn@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
