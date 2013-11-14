@@ -37,7 +37,7 @@ app.use(function(req, res, next){
 });
 
 app.set('routemap', require('express-route-mapper'));
-app.get('routemap').map('config', app);
+app.get('routemap').map(app, 'config');
 
 
 console.log(app.get('routemap').get('list_photos'));
