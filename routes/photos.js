@@ -20,5 +20,11 @@ module.exports = {
         next();
       }
     }
+  },
+
+  create: {
+    callback: function(req, res, next) {
+      res.send('Creating photo...');
+    }
   }
 }

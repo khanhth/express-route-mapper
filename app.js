@@ -39,10 +39,20 @@ app.use(function(req, res, next){
 app.set('routemap', require('express-route-mapper'));
 app.get('routemap').map(app, 'config');
 
+app.get('/dogs', function(req, res) {
+  res.send("List all dogs");
+});
 
+console.log("*******")
 console.log(app.get('routemap').get('list_photos'));
 console.log(app.get('routemap').get('new_photos'));
 console.log(app.get('routemap').get('show_photos', 101));
+console.log(app.get('routemap').alias('/photos/:photo_id', 'get'));
+console.log(app.get('routemap').alias('/photos', 'post'));
+console.log("*******")
+console.log(app.get('routemap').get('dogs'));
+console.log(app.get('routemap').alias('/dogs'));
+console.log("*******")
 
 
 
