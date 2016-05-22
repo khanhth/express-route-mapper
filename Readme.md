@@ -110,7 +110,7 @@ callback: function(req, res, next) {
 
 Copyright (c) 2013 Tran Khanh &lt;trankhanhsvn@gmail.com&gt;
 
-Website: www.hoclaptrinh.org
+Website: [www.hoclaptrinh.org](hoclaptrinh.org)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
